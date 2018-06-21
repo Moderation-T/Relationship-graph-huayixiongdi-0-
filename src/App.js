@@ -12,6 +12,8 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.edges);
+    
     const { nodes, edges } = this.state;
     nodes.forEach(node => {
       node.draggable = true;
@@ -31,6 +33,7 @@ class App extends Component {
           layout: 'force',
           symbolSize: 20,
           roam: true,
+          focusNodeAdjacency: true,
           label: {
             normal: {
               show: true,
@@ -42,9 +45,15 @@ class App extends Component {
           edgeSymbol: ['circle', 'arrow'],
           edgeSymbolSize: [4, 10],
           edgeLabel: {
+            // 连接两个关系对象的线上的标签
             normal: {
+              show: true,
               textStyle: {
-                fontSize: 30,
+                fontSize: 14,
+              },
+              formatter(param) {
+                // 标签内容
+                return param.data.name;
               },
             },
           },
@@ -62,8 +71,7 @@ class App extends Component {
           itemStyle: {
             normal: {
               color(params) {
-                console.log(JSON.stringify(params));
-
+                console.log(params);
                 // build a color map as your need.
                 const colorList = [
                   '#64e7a9',

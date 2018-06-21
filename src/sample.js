@@ -4,15 +4,36 @@ const msg = {
   children: [
     {
       name: '所属行业',
-      children: [{ name: '影视娱乐' }, { name: '品牌授权' }, { name: '实景娱乐' }, { name: '互联网娱乐' }],
+      category:"类型",
+      children: [
+        {
+          name: '影视娱乐',
+          category:"",
+        },
+        {
+          name: '品牌授权',
+          category:"",
+        },
+        {
+          name: '实景娱乐',
+        },
+        {
+          name: '互联网娱乐',
+        },
+      ],
     },
     {
       name: '行业龙头',
+      category:"",
       children: [
-        { name: '自己' },
+        { name: '自己' ,
+        category:""},
         {
           name: '竞争对手',
-          children: [{ name: '万达影视' }, { name: '光线传媒' }],
+          category:"",
+          children: [{ name: '万达影视' ,
+          category:""}, { name: '光线传媒' ,
+          category:""}],
         },
       ],
     },
@@ -188,75 +209,77 @@ const msg = {
           children: [
             {
               name: '北京兄弟联合投资有限公司',
-              children: [{ name: '董事' }, { name: '总经理' }],
+              category:'董事、总经理',
+
             },
             {
               name: '北京多慕斯餐饮管理有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: '尔果斯华谊兄弟创业投资有限公司',
-              children: [{ name: '执行董事' }, { name: '经理' }],
+              category:'执行董事、经理',
+              
             },
             {
               name: '	保利华谊（上海）拍卖有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊兄弟（天津）体育文化有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '	华谊兄弟（天津）投资有限公司',
-              children: [{ name: '执行董事' }, { name: '经理' }],
+              category:'执行董事、经理',
             },
             {
               name: '北京华谊兄弟创星娱乐科技股份有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊兄弟南京艺术有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '上海嘉华影视文化产业发展有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '天津滨海新区华谊启明东方暖公 关顾问有限责任公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊影城（苏州）有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '海南观澜湖华谊冯小刚文化旅游 实业有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊玄如文化艺术有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '英雄互娱科技股份有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '海南观澜湖华谊冯小刚电影公社 影视服务有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊天辰国际投资基金普通合伙人有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊天辰国际投资基金资产管理 有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊腾讯娱乐有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
           ],
         },
@@ -265,95 +288,95 @@ const msg = {
           children: [
             {
               name: '北京兄弟联合投资有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '霍尔果斯华谊兄弟创业投资有限公司',
-              children: [{ name: '监事' }],
+              category:'监事',
             },
             {
               name: '华谊兄弟（天津）投资有限公司',
-              children: [{ name: '监事' }],
+              category:'监事',
             },
             {
               name: '华谊兄弟时尚（上海）文化传媒有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: 'All’s Well Media Company Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊兄弟（天津）实景娱乐有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: 'China Lion Entertainment Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '深圳市华宇讯科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '浙江常升影视制作有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '新圣堂（天津）文化传播有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: 'GDC Technology Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: 'Guru Online(Holdings) Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊乐恒有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '浙江东阳浩瀚影视娱乐有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: '浙江东阳美拉传媒有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: '北京华谊兄弟聚星文化有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: '华谊兄弟（北京）电影发行有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: '英雄互娱科技股份有限公司',
-              children: [{ name: '副董事长' }],
+              category:'副董事长',
             },
             {
               name: '北京华谊兄弟创星娱乐科技股份有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '北京魔镜未来科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊腾讯娱乐有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '保利华谊（上海）拍卖有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '北京随视传媒科技股份有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
           ],
         },
@@ -362,43 +385,43 @@ const msg = {
           children: [
             {
               name: '广州银汉科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '深圳市华宇讯科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: 'GDC Technology Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '兄弟姐妹（天津）文化信息咨询合 伙企业（有限合伙）	',
-              children: [{ name: '执行事务合伙人' }],
+              category:'事务合伙人',
             },
             {
               name: '乐恒互动（北京）文化有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊玄如文化艺术有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '深圳市星河互动科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华谊乐恒有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '天津滨海新区华谊启明东方暖公关顾问有限责任公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '上海刃游网络科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
           ],
         },
@@ -407,11 +430,11 @@ const msg = {
           children: [
             {
               name: 'GDC Technology Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '华影天下（天津）电影发行有限责任公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
           ],
         },
@@ -420,7 +443,7 @@ const msg = {
           children: [
             {
               name: '北京兄弟联合投资有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
           ],
         },
@@ -429,31 +452,31 @@ const msg = {
           children: [
             {
               name: 'GDC Technology Limited',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '北京天赐之恒网络科技有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '英雄互娱科技股份有限公司',
-              children: [{ name: '监事' }],
+              category:'监事',
             },
             {
               name: '北京集结号资本',
-              children: [{ name: '合伙人' }],
+              category:'合伙人',
             },
             {
               name: '做实事科技服务（北京）有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '北京爱月投资有限公司',
-              children: [{ name: '执行董事' }, { name: '经理' }],
+              category:'执行董事、总经理',
             },
             {
               name: '北京还有电影科技有限公司',
-              children: [{ name: '董事长' }, { name: '总经理' }],
+              category:'董事长、总经理',
             },
           ],
         },
@@ -462,31 +485,31 @@ const msg = {
           children: [
             {
               name: '上海磐石投资有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '上海交运集团股份有限公司',
-              children: [{ name: '独立董事' }],
+              category:'独立董事',
             },
             {
               name: '中国永达汽车服务控股有限公司',
-              children: [{ name: '非执行董事' }],
+              category:'非执行董事',
             },
             {
               name: '上海新通联包装股份有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '上海润欣科技股份有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '上海鹏欣环球资源股份有限公司',
-              children: [{ name: '独立董事' }],
+              category:'独立董事',
             },
             {
               name: '艺龙公司 /CHINA E-DRAGON HOLDINGS LIMITED',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
           ],
         },
@@ -495,19 +518,19 @@ const msg = {
           children: [
             {
               name: '浪潮软件股份有限公司',
-              children: [{ name: '独立董事' }],
+              category:'独立董事',
             },
             {
               name: '中商惠民（北京）电子商务有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '北京洪泰同创投资管理有限公司',
-              children: [{ name: '执行董事' }],
+              category:'执行董事',
             },
             {
               name: '洪泰资本控股有限公司',
-              children: [{ name: '总经理' }],
+              category:'总经理',
             },
           ],
         },
@@ -516,15 +539,15 @@ const msg = {
           children: [
             {
               name: '山西蓝焰控股股份有限公司',
-              children: [{ name: '独立董事' }],
+              category:'独立董事',
             },
             {
               name: '长治银行股份有限公司',
-              children: [{ name: '监事' }],
+              category:'监事',
             },
             {
               name: '山西祝融万权（天津）律师事务所',
-              children: [{ name: '主任' }],
+              category:'主任',
             },
           ],
         },
@@ -533,39 +556,39 @@ const msg = {
           children: [
             {
               name: '中泽嘉盟投资有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '北京中泽启天投资中心（有限合伙）',
-              children: [{ name: '执行事务合伙人' }],
+              category:'执行事务合伙人',
             },
             {
-              name: '上海稳实投资管理中心（普通合 伙）',
-              children: [{ name: '执行事务合伙人' }],
+              name: '上海稳实投资管理中心（普通合伙）',
+              category:'执行事务合伙人',
             },
             {
               name: '北京博升优势科技发展有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '卓尔集团股份有限公司',
-              children: [{ name: '独立非执行董事' }],
+              category:'独立非执行董事',
             },
             {
               name: '广州达意隆包装机械股份有限公司',
-              children: [{ name: '独立董事' }],
+              category:'独立董事',
             },
             {
               name: '海联金汇科技股份有限公司',
-              children: [{ name: '董事' }],
+              category:'董事',
             },
             {
               name: '茂业通信网络股份有限公司',
-              children: [{ name: '董事长' }],
+              category:'董事长',
             },
             {
               name: '众安在线财产保险股份有限公司',
-              children: [{ name: '独立非执行董事' }],
+              category:'独立非执行董事',
             },
           ],
         },
@@ -574,7 +597,7 @@ const msg = {
           children: [
             {
               name: '浙江东阳浩瀚影视娱乐有限公司',
-              children: [{ name: '总经理' }],
+              category:'总经理',
             },
           ],
         },
@@ -610,14 +633,14 @@ function traverseTree(node) {
   resultArr = trim(initArr);
   if (node.children && node.children.length > 0) {
     let i = 0;
-    for (i = 0; i < node.children.length; i+=1) {
+    for (i = 0; i < node.children.length; i += 1) {
       traverseTree(node.children[i]);
       data.edges.unshift({
-        id: data.edges.length,
+        name: node.children[i].category ? node.children[i].category : ' ',
         source: node.name,
         target: node.children[i].name,
         weight: 1,
-        time: node.time,
+        // category:
       });
     }
   }
@@ -626,7 +649,7 @@ function traverseTree(node) {
 traverseTree(msg);
 
 data.nodes = resultArr.map(item => ({
-  id: item,
+  // id: item,
   name: item,
   weight: 1,
 }));
