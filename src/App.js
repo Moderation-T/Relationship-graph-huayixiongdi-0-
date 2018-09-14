@@ -5,6 +5,7 @@ import data from './sample';
 class App extends Component {
   constructor(props) {
     super(props);
+  
     this.state = {
       nodes: data.nodes,
       edges: data.edges,
@@ -12,7 +13,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.edges);
+    // console.log(this.state.nodes);
+    console.log(data);
     
     const { nodes, edges } = this.state;
     nodes.forEach(node => {
@@ -23,7 +25,9 @@ class App extends Component {
         text: '华谊兄弟关系图谱',
       },
       tooltip: {
-        trigger: 'item',
+        formatter(x) {
+          return x.data.des;
+        },
       },
       animationDurationUpdate: 1500,
       animationEasingUpdate: 'quinticInOut',
@@ -32,7 +36,7 @@ class App extends Component {
           type: 'graph',
           layout: 'force',
           symbolSize: 20,
-          roam: true,
+          roam: true, // 
           focusNodeAdjacency: true,
           label: {
             normal: {
@@ -71,7 +75,6 @@ class App extends Component {
           itemStyle: {
             normal: {
               color(params) {
-                console.log(params);
                 // build a color map as your need.
                 const colorList = [
                   '#64e7a9',

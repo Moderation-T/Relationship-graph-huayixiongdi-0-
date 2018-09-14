@@ -4,7 +4,6 @@ const msg = {
   children: [
     {
       name: '所属行业',
-      category:"类型",
       children: [
         {
           name: '影视娱乐',
@@ -607,8 +606,8 @@ const msg = {
 };
 
 const data = {
-  edges: [],
-  nodes: [],
+  edges: [], // 节点关系
+  nodes: [], // 根节点
 };
 
 const initArr = [];
@@ -628,17 +627,19 @@ function traverseTree(node) {
   if (!node) {
     return;
   }
-
-  initArr.push(node.name);
-  resultArr = trim(initArr);
+  // 这两个步骤是为了nodes数组做准备 根节点不能有重复的名字 
+  initArr.push(node.name); // 储存节点的名称 
+  resultArr = trim(initArr); // 将重复的节点去重
+  
   if (node.children && node.children.length > 0) {
     let i = 0;
     for (i = 0; i < node.children.length; i += 1) {
       traverseTree(node.children[i]);
       data.edges.unshift({
-        name: node.children[i].category ? node.children[i].category : ' ',
-        source: node.name,
-        target: node.children[i].name,
+        name: node.children[i].category ? node.children[i].category : ' ', // 储存人物在公司的相应职位 显示在相应的连接线上
+        desc: node.children[i].desc ? node.children[i].desc : ' ',
+        source: node.name, // 跟节点名称
+        target: node.children[i].name, // 目标节点名称
         weight: 1,
         // category:
       });
@@ -647,11 +648,30 @@ function traverseTree(node) {
 }
 
 traverseTree(msg);
-
 data.nodes = resultArr.map(item => ({
   // id: item,
   name: item,
   weight: 1,
 }));
+
+/*
+data的结构：
+data: [
+  edges:[
+    source:'' , // 是对应根节点的名字
+    target:'', // 是子节点的名字
+    name:'', // 自己加上的 作为存储线条上的文字关系注释 比如谁谁谁是董事长之类的
+    desc:'', // 其实没有用上
+    weight:1
+  ],
+  // nodes 是所有的根节点
+  nodes:[
+    name:'', 根节点的名称 
+    weight:1,
+    draggable:true, // 是否可以拖拽
+  ] 
+]
+
+*/
 
 export default data;
