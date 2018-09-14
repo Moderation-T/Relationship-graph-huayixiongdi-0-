@@ -610,8 +610,8 @@ const data = {
   nodes: [], // 根节点
 };
 
-const initArr = [];
-let resultArr = [];
+const initArr = []; // 用来储存节点名称
+let resultArr = []; // 储存去重后的结果
 
 // 去重函数
 function trim(arr) {
@@ -674,4 +674,5 @@ data: [
 
 */
 
+// 全局暴露data
 export default data;

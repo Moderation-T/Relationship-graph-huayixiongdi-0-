@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.nodes);
     console.log(data);
     
     const { nodes, edges } = this.state;
@@ -29,15 +28,15 @@ class App extends Component {
           return x.data.des;
         },
       },
-      animationDurationUpdate: 1500,
-      animationEasingUpdate: 'quinticInOut',
+      animationEasingUpdate: "quinticInOut",          // 数据更新动画的缓动效果。[ default: cubicOut ]    "quinticInOut"
+	    animationDurationUpdate: 100,                    // 数据更新动画的时长。[ default: 300 ]
       series: [
         {
           type: 'graph',
           layout: 'force',
           symbolSize: 20,
-          roam: true, // 
-          focusNodeAdjacency: true,
+	        roam: true,   // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+          focusNodeAdjacency: true, // 是否在鼠标移到节点上的时候突出显示节点以及节点的边和邻接节点。[ default: false ]
           label: {
             normal: {
               show: true,
@@ -66,10 +65,12 @@ class App extends Component {
           links: edges,
           lineStyle: {
             normal: {
-              color: 'source',
-              opacity: 0.9,
-              width: 2,
-              curveness: 0,
+              color: 'source',          // 线的颜色[ default: '#aaa' ]
+              width: 1,               // 线宽[ default: 1 ]
+              type: 'solid',          // 线的类型[ default: solid ]   'dashed'    'dotted'
+              opacity: 0.5,           // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。[ default: 0.5 ]
+              curveness: 0            // 边的曲度，支持从 0 到 1 的值，值越大曲度越大。[ default: 0 ]
+
             },
           },
           itemStyle: {
